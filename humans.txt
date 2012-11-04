@@ -1,0 +1,23 @@
+/* TEAM */
+Yorick Dieng
+Site: email, link to a contact form, etc.
+Twitter: @YDIENG.
+Location: Paris, France.
+
+Sofiane 
+Site: email, link to a contact form, etc.
+Twitter: your Twitter username.
+Location: Paris, France.
+
+Camille Rabier
+Site: www.camillerabier.fr.
+Twitter: @camille_rabier.
+Location: Paris, France.
+
+/* SPECIAL THANKS TO OUR PARTNAIRS*/
+Notre intervenant : Monsieur Jacques Augustin
+
+/* SITE */
+Last update: 02/11/2012
+Standards: HTML5, CSS3.
+Components: javascript

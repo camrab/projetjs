@@ -1,0 +1,201 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Notre superbe formulaire</title>
+	<link type="text/plain" rel="author" href="humans.txt" /> <!-- La Team -->
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+	<!-- JS -->
+	<script type="text/javascript" src="form.js"></script>
+	
+	<!-- <script type="text/javascript">
+	</script> -->
+</head>
+
+<body>
+	<form name="monFormulaire">
+		<!-- Identity -->
+		<p>
+			<label for="name">Nom :</label>
+			<input type="text" name="name" value="Nom" onFocus="if (value == 'Nom') (value='')" />
+			
+			<label for="firstname">Prénom :</label>
+			<input type="text" name="firstname" value="Prénom" onFocus="if (value == 'Prénom') (value='')" /><br />
+		</p>
+		
+		<!-- Date. Si mineur, affichez une alerte, correspondre les champs ensemble -->
+		<p>
+			<label for="date">Date :</label>
+			
+			<!-- Jour -->
+			<select name="day">
+				<option value="faible">1</option>
+				<option value="intermediaire">2</option>
+				<option value="fort">3</option>
+				<option value="faible">4</option>
+				<option value="intermediaire">5</option>
+				<option value="fort">6</option>
+				<option value="faible">7</option>
+				<option value="intermediaire">8</option>
+				<option value="fort">9</option>
+				<option value="faible">10</option>
+				<option value="intermediaire">11</option>
+				<option value="fort">12</option>
+			</select>
+			
+			<!-- Mois -->
+			<select name="months">
+				<option value="janvier">Janv.</option>
+				<option value="fevrier">Fév.</option>
+				<option value="mars">Mars</option>
+				<option value="avril">Av.</option>
+				<option value="mai">Mai</option>
+				<option value="juin">Juin</option>
+				<option value="juillet">Jui.</option>
+				<option value="aout">Aout</option>
+				<option value="septembre">Sept.</option>
+				<option value="octobre">Oct.</option>
+				<option value="novembre">Nov.</option>
+				<option value="decembre">Déc.</option>
+			</select>
+			
+			<!-- Année -->
+			<select name="year">
+				<option value="year3000">3000</option>
+				<option value="year2000">2000</option>
+				<option value="year1999">1999</option>
+				<option value="year1998">1998</option>
+				<option value="year1997">1997</option>
+				<option value="year1996">1996</option>
+				<option value="year1995">1995</option>
+				<option value="year1994">1994</option>
+				<option value="year1993">1993</option>
+				<option value="year1992">1992</option>
+				<option value="year1991">1991</option>
+				<option value="year1990">1990</option>
+				<option value="year1989">1989</option>
+			</select>
+			
+			<input type="reset" value="Effacez tout !" /><br /> <!-- Reset niquement pour la date -->
+		</p>
+		
+		<!-- Telephone Vérifier les champs type-->
+		<p>
+			<h2>Numéro de téléphone</h2>
+			<label for="tel">Domicile :</label>
+			<input type="phone" name="tel" value="0123456789" onFocus="if (value == '0123456789') (value='')" /><br />
+			
+			<label for="mobile">Portable :</label>
+			<input type="phone" name="mobile" value="0612345678" onFocus="if (value == '0612345678') (value='')" /><br />
+			
+			<label for="pro">Professionnel :</label>
+			<input type="phone" name="pro" value="0123456789" onFocus="if (value == '0123456789') (value='')" /><br />
+		</p>
+		
+		<!-- Adresse : ok -->
+		<p>
+			<label for="adresse">Adresse :</label>
+			<input type="text" name="adresse" value="Adresse" onFocus="if (value == 'Adresse') (value='')" /><br />
+			
+			<label for="code">Code postal :</label>
+			<input type="text" name="code" value="75001" onFocus="if (value == '75001') (value='')" />
+			
+			<label for="ville">Ville :</label>
+			<input type="text" name="ville" value="Paris" onFocus="if (value == 'Paris') (value='')" /><br />
+
+			<label for="mail">Email :</label>
+			<input type="text" name="mail" value="@" onFocus="if (value == '@') (value='')" /><br />
+		</p>
+		
+		<!-- Profession -->
+		<p>
+			<h2>Profession</h2>
+			<input type="radio" name="metier" value="cadre" id="cadre" /> <label for="cadre">Cadre</label><br />
+			<div class="hide"><!-- Champs invisibles -->
+				<label for="entreprise">Entreprise : </label>
+				<input type="text" name="metier" value="Entreprise" onFocus="if (value == 'Entreprise') (value='')" /><br />
+			</div>
+			
+			<input type="radio" name="metier" value="fonctionnaire" id="fonctionnaire" /> <label for="fonctionnaire">Fonctionnaire</label><br />
+			<div class="hide"><!-- Champs invisibles -->
+				<label for="entite_admin">Entité Administrative : </label>
+				<input type="text" name="metier" value="Entité Administrative" onFocus="if (value == 'Entité Administrative') (value='')" /><br />
+			</div>
+			
+			<input type="radio" name="metier" value="liberal" id="liberal" /> <label for="liberal">Profession libérale</label><br />
+			<input type="radio" name="metier" value="artisan" id="artisan" /> <label for="artisan">Artisan</label><br />
+			<input type="radio" name="metier" value="salarie" id="salarie" /> <label for="salarie">Salarié</label><br />
+			<input type="radio" name="metier" value="patron" id="patron" /> <label for="patron">Patron</label>
+			
+			<!-- Champ invisibles-->
+			<select name="patron">
+				<option value="patron3000">3000</option>
+				<option value="patron2000">2000</option>
+				<option value="patron1999">1999</option>
+				<option value="patron1998">1998</option>
+				<option value="patron1997">1997</option>
+				<option value="patron1996">1996</option>
+				<option value="patron1995">1995</option>
+				<option value="patron1994">1994</option>
+				<option value="patron1993">1993</option>
+				<option value="patron1992">1992</option>
+				<option value="patron1991">1991</option>
+				<option value="patron1990">1990</option>
+				<option value="patron1989">1989</option>
+			</select><br />
+			
+			<input type="radio" name="metier" value="etudiant" id="etudiant" /> <label for="etudiant">Etudiant, Lycéen</label><br />
+			<div class="hide"><!-- Champs invisibles -->
+				<label for="ecole">Ecole/université :</label>
+				<input type="text" name="metier" value="Ecole" onFocus="if (value == 'Ecole') (value='')" /><br />
+			</div>
+			
+			<input type="radio" name="metier" value="metier_autre" id="metier_autre" /> <label for="metier_autre">Autre : précisez : </label>
+			<input type="text" name="metier" value="Autre" onFocus="if (value == 'Autre') (value='')"/><br />
+		</p>
+		
+		<!-- Centres d'intérêt -->
+		<p>
+			<h2>Centres d'intérêt</h2>
+			<input type="checkbox" name="sport" id="sport" /> <label for="sport">Sport</label><br />
+			<input type="checkbox" name="cine" id="cine" /> <label for="cine">Cinéma</label><br />
+			<input type="checkbox" name="jeux" id="jeux" /> <label for="jeux">Jeux</label><br />
+			<input type="checkbox" name="lecture" id="lecture" /> <label for="lecture">Lecture</label><br />
+		
+			<input type="checkbox" name="info" id="info" /> <label for="info">Informatique</label><br />
+			<div class="hide" id="hide1"><!-- Champs invisibles -->
+				<input type="checkbox" name="logiciel" id="logiciel" /> <label for="logiciel">Logiciels</label><br />
+				<input type="checkbox" name="info_jeux" id="info_jeux" /> <label for="info_jeux">Jeux</label><br />
+			</div>
+			<!-- Alerte "Nouvelle fenêtre pour jouer" -->
+			
+			<div id="hide2">
+				<input type="checkbox" name="codage" id="codage" /> <label for="codage">Codage</label><br />
+				<input type="checkbox" name="hardware" id="hardware" /> <label for="hardware">Hardware</label><br />
+			</div>
+			
+			<input type="checkbox" name="nature" id="nature" /> <label for="nature">Nature</label><br />
+			<input type="checkbox" name="sorties" id="sorties" /> <label for="sorties">Sorties</label><br />
+			<input type="checkbox" name="interet_autres" id="interet_autres" /> <label for="interet_autres">Autres :</label>
+			<input type="text" name="autre" value="Autres" onFocus="if (value == 'Autres') (value='')" /><br />
+			
+			<label for="level">Niveau du jeu :</label>
+			<select name="level" id="level">
+				<option value="faible">Faible</option>
+				<option value="intermediaire">Intermédiaire</option>
+				<option value="fort">Fort</option>
+				<option value="expert">Expert</option>
+			</select><br />
+		</p>
+		
+		<!-- Motivations, masquer s'il a choisi le level "expert"-->
+		<label for="motivations">Motivations :</label><br />
+		<textarea name="motivations" rows="7" cols="30" placeholder= "Décrivez en quelques lignes vos motivations..." onFocus="if (value == 'Décrivez en quelques lignes vos motivations...') (value='')" ></textarea><br />
+		
+		<input type="submit" value="Envoyer !" />
+		<input type="reset" value="Effacez tout !" />
+	</form>
+</body>
+</html>

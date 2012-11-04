@@ -1,0 +1,21 @@
+/* Un petit CSS pour une mise en forme claire 
+MAJ : 02/11/2012
+*/
+
+form {
+	margin-left: 5px;
+}
+
+h2 {
+	font-size: 16px;
+	font-family: Arial, sans serif;
+}
+
+.hide, #hide2{ /* Marge à gauche pour les sous-champs */
+	margin-left: 25px;
+}
+
+#hide1 {
+	float: left;
+	margin-right: 25px;
+}
