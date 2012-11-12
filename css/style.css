@@ -1,21 +1,52 @@
 /* Un petit CSS pour une mise en forme claire 
-MAJ : 02/11/2012
+MAJ : 05/11/2012
 */
 
-form {
-	margin-left: 5px;
-}
+/* ----------------
+De manière générale
+------------------*/
+form {padding-left: 10px;}/* Formulaire globale */
 
-h2 {
+h2 { /* Titres */
 	font-size: 16px;
 	font-family: Arial, sans serif;
+	clear: both;
+	margin: 15px 0 5px 0;
 }
 
-.hide, #hide2{ /* Marge à gauche pour les sous-champs */
-	margin-left: 25px;
-}
+.bloc {margin-top: 20px;}
 
-#hide1 {
-	float: left;
-	margin-right: 25px;
-}
+
+/* ---------------------
+Les sous champs à cacher
+----------------------*/
+#entreprise_hide, #fonct_hide, #patron_hide, #ecole_hide, #info_hide {display: none;}
+
+.hide {margin-left: 25px;}
+
+
+/* ----------------------
+La partie des professions
+------------------------*/
+#job_left {float: left;}/* Partie de gauche */
+
+#job_right {margin-left: 150px;}/* Partie de gauche */
+
+
+/* ----------------------------
+La partie des centres d'interet
+-----------------------------*/
+#interetleft {float: left;}/* Partie de gauche */
+
+#interetright {margin-left: 80px;}/* Partie de droite */
+
+
+/* ------------------
+Les sous champs de la 
+partie Informatique 
+--------------------*/
+#boxinfoleft {float: left;}/* Partie de gauche */
+
+#boxinforight {margin-left: 120px;}/* Partie de droite */
+
+#niveau {clear: both;}

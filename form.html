@@ -6,131 +6,122 @@
 	
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css" /> -->
 	
 	<!-- JS -->
 	<script type="text/javascript" src="form.js"></script>
-	
-	<!-- <script type="text/javascript">
-	</script> -->
 </head>
 
 <body>
-	<form name="monFormulaire">
-		<!-- Identity -->
-		<p>
-			<label for="name">Nom :</label>
-			<input type="text" name="name" value="Nom" onFocus="if (value == 'Nom') (value='')" />
-			
-			<label for="firstname">Prénom :</label>
-			<input type="text" name="firstname" value="Prénom" onFocus="if (value == 'Prénom') (value='')" /><br />
-		</p>
+<form name="monFormulaire">
+	<div id="identity" class="bloc"><!-- Identité -->
+		<label for="name">Nom :</label>
+		<input type="text" name="name" value="Nom" id="name" onFocus="if (value == 'Nom') (value='')" />
 		
-		<!-- Date. Si mineur, affichez une alerte, correspondre les champs ensemble -->
-		<p>
-			<label for="date">Date :</label>
-			
-			<!-- Jour -->
-			<select name="day">
-				<option value="day1">1</option>
-				<option value="day2">2</option>
-				<option value="day3">3</option>
-				<option value="day4">4</option>
-				<option value="day5">5</option>
-				<option value="day6">6</option>
-				<option value="day7">7</option>
-				<option value="day8">8</option>
-				<option value="day9">9</option>
-				<option value="day10">10</option>
-				<option value="day11">11</option>
-				<option value="day12">12</option>
-			</select>
-			
-			<!-- Mois -->
-			<select name="months">
-				<option value="janvier">Janv.</option>
-				<option value="fevrier">Fév.</option>
-				<option value="mars">Mars</option>
-				<option value="avril">Av.</option>
-				<option value="mai">Mai</option>
-				<option value="juin">Juin</option>
-				<option value="juillet">Jui.</option>
-				<option value="aout">Aout</option>
-				<option value="septembre">Sept.</option>
-				<option value="octobre">Oct.</option>
-				<option value="novembre">Nov.</option>
-				<option value="decembre">Déc.</option>
-			</select>
-			
-			<!-- Année -->
-			<select name="year">
-				<option value="year3000">3000</option><!-- Affiche une alerte si sélectionne 3000 "vous êtes dans le futur" -->
-				<option value="year2000">2000</option>
-				<option value="year1999">1999</option>
-				<option value="year1998">1998</option>
-				<option value="year1997">1997</option>
-				<option value="year1996">1996</option>
-				<option value="year1995">1995</option>
-				<option value="year1994">1994</option>
-				<option value="year1993">1993</option>
-				<option value="year1992">1992</option>
-				<option value="year1991">1991</option>
-				<option value="year1990">1990</option>
-				<option value="year1989">1989</option>
-			</select>
-			
-			<input type="reset" value="Effacez tout !" /><br /> <!-- Reset uniquement pour la date -->
-		</p>
+		<label for="firstname">Prénom :</label>
+		<input type="text" name="firstname" value="Prénom" id="firstname" onFocus="if (value == 'Prénom') (value='')" />
+	</div>
+	
+	<div id="birth" class="bloc">
+		<label for="date">Date :</label><!-- Date -->
+		<select name="day" id="date"><!-- Jour -->
+			<option value="day1">1</option>
+			<option value="day2">2</option>
+			<option value="day3">3</option>
+			<option value="day4">4</option>
+			<option value="day5">5</option>
+			<option value="day6">6</option>
+			<option value="day7">7</option>
+			<option value="day8">8</option>
+			<option value="day9">9</option>
+			<option value="day10">10</option>
+			<option value="day11">11</option>
+			<option value="day12">12</option>
+		</select>
 		
-		<!-- Telephone Vérifier les champs type-->
-		<p>
-			<h2>Numéro de téléphone</h2>
-			<label for="tel">Domicile :</label>
-			<input type="phone" name="tel" value="0123456789" onFocus="if (value == '0123456789') (value='')" /><br />
-			
-			<label for="mobile">Portable :</label>
-			<input type="phone" name="mobile" value="0612345678" onFocus="if (value == '0612345678') (value='')" /><br />
-			
-			<label for="pro">Professionnel :</label>
-			<input type="phone" name="pro" value="0123456789" onFocus="if (value == '0123456789') (value='')" /><br />
-		</p>
+		<select name="months" id="months"><!-- Mois -->
+			<option value="janvier">Janv.</option>
+			<option value="fevrier">Fév.</option>
+			<option value="mars">Mars</option>
+			<option value="avril">Av.</option>
+			<option value="mai">Mai</option>
+			<option value="juin">Juin</option>
+			<option value="juillet">Jui.</option>
+			<option value="aout">Aout</option>
+			<option value="septembre">Sept.</option>
+			<option value="octobre">Oct.</option>
+			<option value="novembre">Nov.</option>
+			<option value="decembre">Déc.</option>
+		</select>
 		
-		<!-- Adresse -->
-		<p>
-			<label for="adresse">Adresse :</label>
-			<input type="text" name="adresse" value="Adresse" onFocus="if (value == 'Adresse') (value='')" /><br />
-			
-			<label for="code">Code postal :</label>
-			<input type="text" name="code" value="75001" onFocus="if (value == '75001') (value='')" />
-			
-			<label for="ville">Ville :</label>
-			<input type="text" name="ville" value="Paris" onFocus="if (value == 'Paris') (value='')" /><br />
+		<select name="year" id="year"><!-- Année -->
+			<option value="year3000">3000</option><!-- Affiche une alerte si sélectionne 3000 "vous êtes dans le futur" -->
+			<option value="year2000">2000</option>
+			<option value="year1999">1999</option>
+			<option value="year1998">1998</option>
+			<option value="year1997">1997</option>
+			<option value="year1996">1996</option>
+			<option value="year1995">1995</option>
+			<option value="year1994">1994</option> <!-- Si mineur, affichez une alerte, correspondre les champs ensemble -->
+			<option value="year1993">1993</option>
+			<option value="year1992">1992</option>
+			<option value="year1991">1991</option>
+			<option value="year1990">1990</option>
+			<option value="year1989">1989</option>
+		</select>
+		
+		<input type="button" value="Vérfiez !" onClick="verification()" /> <!-- Uniquement pour la date -->
+	</div>
 
-			<label for="mail">Email :</label>
-			<input type="text" name="mail" value="@" onFocus="if (value == '@') (value='')" /><br />
-		</p>
+	<div id="phone" class="bloc"><!-- Telephone -->
+		<h2>Numéro de téléphone</h2>
+		<label for="tel">Domicile :</label>
+		<input type="tel" name="tel" value="0123456789" id="tel" onFocus="if (value == '0123456789') (value='')" /><br />
 		
-		<!-- Profession -->
-		<p>
-			<h2>Profession</h2>
-			<input type="radio" name="metier" value="cadre" id="cadre" /> <label for="cadre">Cadre</label><br />
-			<div class="hide"><!-- Champs invisibles -->
-				<label for="entreprise">Entreprise : </label>
-				<input type="text" name="metier" value="Entreprise" onFocus="if (value == 'Entreprise') (value='')" /><br />
-			</div>
-			
-			<input type="radio" name="metier" value="fonctionnaire" id="fonctionnaire" /> <label for="fonctionnaire">Fonctionnaire</label><br />
-			<div class="hide"><!-- Champs invisibles -->
-				<label for="entite_admin">Entité Administrative : </label>
-				<input type="text" name="metier" value="Entité Administrative" onFocus="if (value == 'Entité Administrative') (value='')" /><br />
-			</div>
-			
-			<input type="radio" name="metier" value="liberal" id="liberal" /> <label for="liberal">Profession libérale</label><br />
-			<input type="radio" name="metier" value="artisan" id="artisan" /> <label for="artisan">Artisan</label><br />
-			<input type="radio" name="metier" value="salarie" id="salarie" /> <label for="salarie">Salarié</label><br />
-			<input type="radio" name="metier" value="patron" id="patron" /> <label for="patron">Patron</label>
-			
-			<!-- Champ invisibles-->
-			<select name="patron">
+		<label for="mobile">Portable :</label>
+		<input type="tel" name="mobile" value="0612345678" id="mobile" onFocus="if (value == '0612345678') (value='')" /><br />
+		
+		<label for="pro">Professionnel :</label>
+		<input type="tel" name="pro" value="0123456789" id="pro" onFocus="if (value == '0123456789') (value='')" />
+	</div>
+	
+	<div id="adress" class="bloc"><!-- Adresse -->
+		<label for="adresse">Adresse :</label>
+		<input type="text" name="adresse" value="Adresse" id="adresse" onFocus="if (value == 'Adresse') (value='')" /><br />
+		
+		<label for="code">Code postal :</label>
+		<input type="text" name="code" value="75001" id="code" onFocus="if (value == '75001') (value='')" />
+		
+		<label for="ville">Ville :</label>
+		<input type="text" name="ville" value="Paris" id="ville" onFocus="if (value == 'Paris') (value='')" /><br />
+
+		<label for="mail">Email :</label>
+		<input type="email" name="mail" value="@" id="mail" onFocus="if (value == '@') (value='')" />
+	</div>
+	
+	<div id="job" class="bloc"><!-- Profession -->
+		<h2>Profession</h2>
+		
+		<div id="job_left">
+			<input type="radio" name="metier" value="0" id="cadre" /><label for="cadre">Cadre </label><!-- boutton radio Cadre -->
+			<div id="entreprise_hide" class="hide"><!-- ELEMENT CACHE POUR CADRE -->
+				<label for="entreprise">Entreprise :</label> <input type="text" id="entreprise" onBlur="alert('Le champ est vide: Veuillez le remplir')"/>
+			</div><br />
+
+			<input type="radio" name="metier" value="1" id="fonctionnaire" /> <label for="fonctionnaire">Fonctionnaire </label>
+			<div id="fonct_hide" class="hide"><!-- ELEMENT CACHE POUR FONCTIONNAIRE -->
+				<label for="admin">Entité Administrative :<input type="text" id="admin" onBlur="alert('Le champ est vide: Veuillez le remplir')" /></label>
+			</div><br />
+
+			<input type="radio" name="metier" value="2" id="prof_liberal" /> <label for="prof_liberal">Profession Liberal </label><br />
+			<input type="radio" name="metier" value="3" id="artisan" /> <label for="artisan">Artisan </label>
+		</div>
+		
+		<div id="job_right">
+			<input type="radio" name="metier" value="4" id="salarie" /><label for="salarie">Salarié </label><br />
+			<input type="radio" name="metier" value="5" id="patron" /><label for="patron">Patron </label>
+
+			<select name="patron" id="patron_hide" class="hide"> <!-- ELEMENT CACHE POUR PATRON -->
 				<option value="patron3000">3000</option>
 				<option value="patron2000">2000</option>
 				<option value="patron1999">1999</option>
@@ -146,56 +137,181 @@
 				<option value="patron1989">1989</option>
 			</select><br />
 			
-			<input type="radio" name="metier" value="etudiant" id="etudiant" /> <label for="etudiant">Etudiant, Lycéen</label><br />
-			<div class="hide"><!-- Champs invisibles -->
-				<label for="ecole">Ecole/université :</label>
-				<input type="text" name="metier" value="Ecole" onFocus="if (value == 'Ecole') (value='')" /><br />
-			</div>
-			
-			<input type="radio" name="metier" value="metier_autre" id="metier_autre" /> <label for="metier_autre">Autre : précisez : </label>
-			<input type="text" name="metier" value="Autre" onFocus="if (value == 'Autre') (value='')"/><br />
-		</p>
+			<input type="radio" name="metier" value="6" id="etudiant" /><label for="etudiant">Etudiant </label>
+			<div id="ecole_hide" class="hide"><!-- ELEMENT CACHE POUR ETUDIANT -->
+				<label for="ecole">Ecole/Université :</label> <input type="text" id="ecole" onBlur="alert('Le champ est vide: Veuillez le remplir')" />
+			</div><br />
+
+			<input type="radio" name="metier" value="7" id="autre" /><label for="autre">Autre </label>
+			<label for="autre2">Précisez :</label> <input type="text" id="autre2" onBlur="alert('Le champ est vide: Veuillez le remplir')"/>
+		</div>
+	</div>
+	
+	<div id="loisir" class="bloc"><!-- Centres d'intérêt -->
+		<h2>Centres d'intérêt</h2>
 		
-		<!-- Centres d'intérêt -->
-		<p>
-			<h2>Centres d'intérêt</h2>
+		<div id="interetleft">
 			<input type="checkbox" name="sport" id="sport" /> <label for="sport">Sport</label><br />
 			<input type="checkbox" name="cine" id="cine" /> <label for="cine">Cinéma</label><br />
 			<input type="checkbox" name="jeux" id="jeux" /> <label for="jeux">Jeux</label><br />
-			<input type="checkbox" name="lecture" id="lecture" /> <label for="lecture">Lecture</label><br />
+			<input type="checkbox" name="lecture" id="lecture" /> <label for="lecture">Lecture</label>
+		</div>
 		
-			<input type="checkbox" name="info" id="info" /> <label for="info">Informatique</label><br />
-			<div class="hide" id="hide1"><!-- Champs invisibles -->
-				<input type="checkbox" name="logiciel" id="logiciel" /> <label for="logiciel">Logiciels</label><br />
-				<input type="checkbox" name="info_jeux" id="info_jeux" /> <label for="info_jeux">Jeux</label><br />
-			</div>
-			<!-- Alerte "Nouvelle fenêtre pour jouer" -->
+		<div id="interetright">
+			<input type="checkbox" name="info" id="info" value="8" /><label for="info">Informatique</label><br />
 			
-			<div id="hide2">
-				<input type="checkbox" name="codage" id="codage" /> <label for="codage">Codage</label><br />
-				<input type="checkbox" name="hardware" id="hardware" /> <label for="hardware">Hardware</label><br />
+			<div id="info_hide"><!-- ELEMENT CACHE POUR INFO -->
+				<div class="hide" id="boxinfoleft"><!-- Champs invisibles, Alerte "Nouvelle fenêtre pour jouer" -->
+					<input type="checkbox" name="logiciel" id="logiciel" /> <label for="logiciel">Logiciels</label><br />
+					<input type="checkbox" name="info_jeux" id="info_jeux" onClick="jeux()" /> <label for="info_jeux">Jeux</label>
+				</div>
+
+				<div class="hide" id="boxinforight">
+					<input type="checkbox" name="codage" id="codage" /> <label for="codage">Codage</label><br />
+					<input type="checkbox" name="hardware" id="hardware" /> <label for="hardware">Hardware</label>
+				</div>
 			</div>
 			
 			<input type="checkbox" name="nature" id="nature" /> <label for="nature">Nature</label><br />
 			<input type="checkbox" name="sorties" id="sorties" /> <label for="sorties">Sorties</label><br />
 			<input type="checkbox" name="interet_autres" id="interet_autres" /> <label for="interet_autres">Autres :</label>
-			<input type="text" name="autre" value="Autres" onFocus="if (value == 'Autres') (value='')" /><br />
-			
+			<input type="text" name="autre" value="Autres" onFocus="if (value == 'Autres') (value='')" />
+		</div>
+		
+		<div id="niveau">
 			<label for="level">Niveau du jeu :</label>
 			<select name="level" id="level">
 				<option value="faible">Faible</option>
 				<option value="intermediaire">Intermédiaire</option>
 				<option value="fort">Fort</option>
-				<option value="expert">Expert</option>
-			</select><br />
-		</p>
+				<option value="expert" name="expert">Expert</option>
+			</select>
+		</div>
+	</div>
+	
+	<div id="motiv" class="bloc"><!-- Motivations, masquer s'il a choisi le level "expert"-->
+		<h2><label for="motivations">Motivations</label></h2>
+		<textarea name="motivations" id="motivations" rows="7" cols="30" placeholder="Décrivez en quelques lignes vos motivations..." onFocus="if (value == 'Décrivez en quelques lignes vos motivations...') (value='')" ></textarea>
+	</div>
+	
+	<input type="submit" value="Envoyer !" />
+	<input type="reset" value="Effacez tout !" />
+</form>
+	
+<script type="text/javascript"> /*Début du script pour Profession */
+	document.forms[0].name.focus();/*Ici on donne le focus a name du input de départ qui attribut le champ nom*/
+	
+	var cadre = document.monFormulaire.metier[0];
+	var fonctionnaire = document.monFormulaire.metier[1];
+	var prof_liberal = document.monFormulaire.metier[2];
+	var artisan = document.monFormulaire.metier[3];
+	var salarie = document.monFormulaire.metier[4];
+	var patron = document.monFormulaire.metier[5];
+	var etudiant = document.monFormulaire.metier[6];
+	var autre = document.monFormulaire.metier[7];
+	var info = document.monFormulaire.info;
+	var level = document.monFormulaire.level;
+
+	cadre.onclick = function() {
+		document.getElementById("entreprise_hide").style.display = "block" /*ici l'élément dans la div hidden sera affiché*/
+		document.getElementById("fonct_hide").style.display = "none"
+		document.getElementById("patron_hide").style.display = "none"
+		document.getElementById("ecole_hide").style.display = "none"
+		document.getElementById("autre_hide").style.display = "none"
+	};
+	
+	fonctionnaire.onclick = function() {
+		document.getElementById("entreprise_hide").style.display = "none"
+		document.getElementById("fonct_hide").style.display = "block" /*ici l'élément dans la div hidden2 sera affiché*/
+		document.getElementById("patron_hide").style.display = "none"
+		document.getElementById("ecole_hide").style.display = "none"
+		document.getElementById("autre_hide").style.display = "none"
+	};
+	
+	prof_liberal.onclick = function() {
+		document.getElementById("entreprise_hide").style.display = "none"
+		document.getElementById("fonct_hide").style.display = "none"
+		document.getElementById("patron_hide").style.display = "none"
+		document.getElementById("ecole_hide").style.display = "none"
+		document.getElementById("autre_hide").style.display = "none"
+	};
+	
+	artisan.onclick = function() {
+		document.getElementById("entreprise_hide").style.display = "none"
+		document.getElementById("fonct_hide").style.display = "none"
+		document.getElementById("patron_hide").style.display = "none"
+		document.getElementById("ecole_hide").style.display = "none"
+		document.getElementById("autre_hide").style.display = "none"
+	};
+	
+	salarie.onclick = function() {
+		document.getElementById("entreprise_hide").style.display = "none"
+		document.getElementById("fonct_hide").style.display = "none"
+		document.getElementById("patron_hide").style.display = "none"
+		document.getElementById("ecole_hide").style.display = "none"
+		document.getElementById("autre_hide").style.display = "none"
+	};
+	
+	patron.onclick = function() {
+		document.getElementById("entreprise_hide").style.display = "none"
+		document.getElementById("fonct_hide").style.display = "none"
+		document.getElementById("patron_hide").style.display = "block" /*ici l'élément dans la div patron_hide sera affiché*/
+		document.getElementById("ecole_hide").style.display = "none"
+		document.getElementById("autre_hide").style.display = "none"
+	};
+	
+	etudiant.onclick = function() {
+		document.getElementById("entreprise_hide").style.display = "none"
+		document.getElementById("fonct_hide").style.display = "none"
+		document.getElementById("patron_hide").style.display = "none"
+		document.getElementById("ecole_hide").style.display = "block" /*ici l'élément dans la div ecole_hide sera affiché*/
+		document.getElementById("autre_hide").style.display = "none"
+	};
+	
+	autre.onclick = function() {
+		document.getElementById("entreprise_hide").style.display = "none"
+		document.getElementById("fonct_hide").style.display = "none"
+		document.getElementById("patron_hide").style.display = "none"
+		document.getElementById("ecole_hide").style.display = "none"
+		document.getElementById("autre_hide").style.display = "block" /*ici l'élément dans la div autre_hide sera affiché*/
+	};
+	
+	//Cacher le info
+	info.onclick = function() {
+		if(document.getElementById("info_hide").style.display == "block") {
+			document.getElementById("info_hide").style.display = "none";
+		} else {
+			document.getElementById("info_hide").style.display = "block";
+		}
+	};
+	
+	// Cacher motiv si niveau expert
+	level.onchange = function() {
+		if(level.options[level.selectedIndex].value == "expert") {
+			document.getElementById("motiv").style.display = "none";
+		} else {
+			document.getElementById("motiv").style.display = "block";
+		}
+	};
+	
+	function jeux() {
+		alert("Nouvelle fenêtre pour jouer !");
+		if(document.getElementById("info_jeux").checked == true) {
+			alert("Nouvelle fenêtre pour jouer !");
+		}
+	};
+	
+	//Vérifier l'âge
+	function verification() {
+		var day = document.getElementById("day");
+		var months = document.getElementById("months");
+		var year = document.getElementById("year");
 		
-		<!-- Motivations, masquer s'il a choisi le level "expert"-->
-		<label for="motivations">Motivations :</label><br />
-		<textarea name="motivations" rows="7" cols="30" placeholder= "Décrivez en quelques lignes vos motivations..." onFocus="if (value == 'Décrivez en quelques lignes vos motivations...') (value='')" ></textarea><br />
-		
-		<input type="submit" value="Envoyer !" />
-		<input type="reset" value="Effacez tout !" />
-	</form>
+		if (year < 1994) {
+			alert("Tu es trop jeune");
+		}
+	}
+
+</script><!-- fin du script -->
 </body>
 </html>
