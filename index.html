@@ -16,87 +16,121 @@
 <form name="monFormulaire">
 	<div id="identity" class="bloc"><!-- Identité -->
 		<label for="name">Nom :</label>
-		<input type="text" name="name" value="Nom" id="name" onFocus="if (value == 'Nom') (value='')" />
+		<input type="text" name="name" value="Nom" id="name" onFocus="if (value == 'Nom') (value='')" onBlur="Vide(value)" />
 		
 		<label for="firstname">Prénom :</label>
-		<input type="text" name="firstname" value="Prénom" id="firstname" onFocus="if (value == 'Prénom') (value='')" />
+		<input type="text" name="firstname" value="Prénom" id="firstname" onFocus="if (value == 'Prénom') (value='')" onBlur="Vide(value)" />
 	</div>
 	
 	<div id="birth" class="bloc">
-		<label for="date">Date :</label><!-- Date -->
-		<select name="day" id="date"><!-- Jour -->
-			<option value="day1">1</option>
-			<option value="day2">2</option>
-			<option value="day3">3</option>
-			<option value="day4">4</option>
-			<option value="day5">5</option>
-			<option value="day6">6</option>
-			<option value="day7">7</option>
-			<option value="day8">8</option>
-			<option value="day9">9</option>
-			<option value="day10">10</option>
-			<option value="day11">11</option>
-			<option value="day12">12</option>
+		<label for="date">Date de naissance :</label><!-- Date -->
+		<select name="day" id="day"><!-- Jour -->
+			<option value="jour">Jour</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
 		</select>
 		
 		<select name="months" id="months"><!-- Mois -->
-			<option value="janvier">Janv.</option>
-			<option value="fevrier">Fév.</option>
-			<option value="mars">Mars</option>
-			<option value="avril">Av.</option>
-			<option value="mai">Mai</option>
-			<option value="juin">Juin</option>
-			<option value="juillet">Jui.</option>
-			<option value="aout">Aout</option>
-			<option value="septembre">Sept.</option>
-			<option value="octobre">Oct.</option>
-			<option value="novembre">Nov.</option>
-			<option value="decembre">Déc.</option>
+			<option value="mois">Mois</option>
+			<option value="1">Janv.</option>
+			<option value="2">Fév.</option>
+			<option value="3">Mars</option>
+			<option value="4">Av.</option>
+			<option value="5">Mai</option>
+			<option value="6">Juin</option>
+			<option value="7">Jui.</option>
+			<option value="8">Aout</option>
+			<option value="9">Sept.</option>
+			<option value="10">Oct.</option>
+			<option value="11">Nov.</option>
+			<option value="12">Déc.</option>
 		</select>
 		
 		<select name="year" id="year"><!-- Année -->
-			<option value="year3000">3000</option><!-- Affiche une alerte si sélectionne 3000 "vous êtes dans le futur" -->
-			<option value="year2000">2000</option>
-			<option value="year1999">1999</option>
-			<option value="year1998">1998</option>
-			<option value="year1997">1997</option>
-			<option value="year1996">1996</option>
-			<option value="year1995">1995</option>
-			<option value="year1994">1994</option> <!-- Si mineur, affichez une alerte, correspondre les champs ensemble -->
-			<option value="year1993">1993</option>
-			<option value="year1992">1992</option>
-			<option value="year1991">1991</option>
-			<option value="year1990">1990</option>
-			<option value="year1989">1989</option>
+			<option value="année">Année</option>
+			<option value="3000">3000</option><!-- Affiche une alerte si sélectionne 3000 "vous êtes dans le futur" -->
+			<option value="2012">2012</option>
+			<option value="2011">2011</option>
+			<option value="2010">2010</option>
+			<option value="2009">2009</option>
+			<option value="2008">2008</option>
+			<option value="2007">2007</option>
+			<option value="2006">2006</option>
+			<option value="2005">2005</option>
+			<option value="2004">2004</option>
+			<option value="2003">2003</option>
+			<option value="2002">2002</option>
+			<option value="2001">2001</option>
+			<option value="2000">2000</option>
+			<option value="1999">1999</option>
+			<option value="1998">1998</option>
+			<option value="1997">1997</option>
+			<option value="1996">1996</option>
+			<option value="1995">1995</option>
+			<option value="1994">1994</option> <!-- Si mineur, affichez une alerte, correspondre les champs ensemble -->
+			<option value="1993">1993</option>
+			<option value="1992">1992</option>
+			<option value="1991">1991</option>
+			<option value="1990">1990</option>
+			<option value="1989">1989</option>
 		</select>
 		
-		<input type="button" value="Vérfiez !" onClick="verification()" /> <!-- Uniquement pour la date -->
+		<input type="button" value="Vérifier !" onClick="CalculAge();" /> <!-- Uniquement pour la date -->
 	</div>
 
 	<div id="phone" class="bloc"><!-- Telephone -->
 		<h2>Numéro de téléphone</h2>
 		<label for="tel">Domicile :</label>
-		<input type="tel" name="tel" value="0123456789" id="tel" onFocus="if (value == '0123456789') (value='')" /><br />
+		<input type="tel" name="tel" value="0123456789" id="tel" onFocus="if (value == '0123456789') (value='')" onChange="NumTel()" onBlur="Vide(value)" /><br />
 		
 		<label for="mobile">Portable :</label>
-		<input type="tel" name="mobile" value="0612345678" id="mobile" onFocus="if (value == '0612345678') (value='')" /><br />
+		<input type="tel" name="mobile" value="0612345678" id="telmobile" onFocus="if (value == '0612345678') (value='')" onChange="NumTel()" onBlur="Vide(value)" /><br />
 		
 		<label for="pro">Professionnel :</label>
-		<input type="tel" name="pro" value="0123456789" id="pro" onFocus="if (value == '0123456789') (value='')" />
+		<input type="tel" name="pro" value="0123456789" id="telpro" onFocus="if (value == '0123456789') (value='')" onChange="NumTel()" onBlur="Vide(value)" />
 	</div>
 	
 	<div id="adress" class="bloc"><!-- Adresse -->
 		<label for="adresse">Adresse :</label>
-		<input type="text" name="adresse" value="Adresse" id="adresse" onFocus="if (value == 'Adresse') (value='')" /><br />
+		<input type="text" name="adresse" value="Adresse" id="adresse" onFocus="if (value == 'Adresse') (value='')" onBlur="Vide(value)" /><br />
 		
-		<label for="code">Code postal :</label>
-		<input type="text" name="code" value="75001" id="code" onFocus="if (value == '75001') (value='')" />
+		<label for="code">Code postal :</label> <!-- Code postal avec la fonction Codeville qui permet de pré-remplir la ville -->
+		<input type="text" name="code" value="Ex : 75001" id="code" onFocus="if (value == 'Ex : 75001') (value='')" onBlur="CodeVille();Vide(value)" />
 		
 		<label for="ville">Ville :</label>
-		<input type="text" name="ville" value="Paris" id="ville" onFocus="if (value == 'Paris') (value='')" /><br />
+		<input type="text" name="ville" value="Ex : Paris" id="ville" onFocus="if (value == 'Ex : Paris') (value='')" onBlur="Vide(value)" /><br />
 
 		<label for="mail">Email :</label>
-		<input type="email" name="mail" value="@" id="mail" onFocus="if (value == '@') (value='')" />
+		<input type="email" name="mail" value="@" id="mail" onFocus="if (value == '@') (value='')" onBlur="Vide(value)" />
 	</div>
 	
 	<div id="job" class="bloc"><!-- Profession -->
@@ -105,21 +139,21 @@
 		<div id="job_left">
 			<input type="radio" name="metier" value="0" id="cadre" /><label for="cadre">Cadre </label><!-- boutton radio Cadre -->
 			<div id="entreprise_hide" class="hide"><!-- ELEMENT CACHE POUR CADRE -->
-				<label for="entreprise">Entreprise :</label> <input type="text" id="entreprise" onBlur="alert('Le champ est vide: Veuillez le remplir')"/>
+				<label for="entreprise">Entreprise :</label> <input type="text" id="entreprise" onBlur="Vide(value)" />
 			</div><br />
 
-			<input type="radio" name="metier" value="1" id="fonctionnaire" /> <label for="fonctionnaire">Fonctionnaire </label>
+			<input type="radio" name="metier" value="1" id="fonctionnaire" /> <label for="fonctionnaire">Fonctionnaire</label>
 			<div id="fonct_hide" class="hide"><!-- ELEMENT CACHE POUR FONCTIONNAIRE -->
-				<label for="admin">Entité Administrative :<input type="text" id="admin" onBlur="alert('Le champ est vide: Veuillez le remplir')" /></label>
+				<label for="admin">Entité Administrative :<input type="text" id="admin" onBlur="Vide(value)" /></label>
 			</div><br />
 
-			<input type="radio" name="metier" value="2" id="prof_liberal" /> <label for="prof_liberal">Profession Liberal </label><br />
-			<input type="radio" name="metier" value="3" id="artisan" /> <label for="artisan">Artisan </label>
+			<input type="radio" name="metier" value="2" id="prof_liberal" /> <label for="prof_liberal">Profession Liberale</label><br />
+			<input type="radio" name="metier" value="3" id="artisan" /> <label for="artisan">Artisan</label>
 		</div>
 		
 		<div id="job_right">
-			<input type="radio" name="metier" value="4" id="salarie" /><label for="salarie">Salarié </label><br />
-			<input type="radio" name="metier" value="5" id="patron" /><label for="patron">Patron </label>
+			<input type="radio" name="metier" value="4" id="salarie" /><label for="salarie">Salarié</label><br />
+			<input type="radio" name="metier" value="5" id="patron" /><label for="patron">Patron</label>
 
 			<select name="patron" id="patron_hide" class="hide"> <!-- ELEMENT CACHE POUR PATRON -->
 				<option value="patron3000">3000</option>
@@ -137,13 +171,13 @@
 				<option value="patron1989">1989</option>
 			</select><br />
 			
-			<input type="radio" name="metier" value="6" id="etudiant" /><label for="etudiant">Etudiant </label>
+			<input type="radio" name="metier" value="6" id="etudiant" /><label for="etudiant">Etudiant</label>
 			<div id="ecole_hide" class="hide"><!-- ELEMENT CACHE POUR ETUDIANT -->
-				<label for="ecole">Ecole/Université :</label> <input type="text" id="ecole" onBlur="alert('Le champ est vide: Veuillez le remplir')" />
+				<label for="ecole">Ecole/Université :</label> <input type="text" id="ecole" onBlur="Vide(value)" />
 			</div><br />
 
-			<input type="radio" name="metier" value="7" id="autre" /><label for="autre">Autre </label>
-			<label for="autre2">Précisez :</label> <input type="text" id="autre2" onBlur="alert('Le champ est vide: Veuillez le remplir')"/>
+			<input type="radio" name="metier" value="7" id="autre" /><label for="autre">Autre</label>
+			<label for="autre2">Précisez :</label> <input type="text" id="autre2" value="Autre" onFocus="if (value == 'Autre') (value='')" onBlur="Vide(value)" />
 		</div>
 	</div>
 	
@@ -163,7 +197,7 @@
 			<div id="info_hide"><!-- ELEMENT CACHE POUR INFO -->
 				<div class="hide" id="boxinfoleft"><!-- Champs invisibles, Alerte "Nouvelle fenêtre pour jouer" -->
 					<input type="checkbox" name="logiciel" id="logiciel" /> <label for="logiciel">Logiciels</label><br />
-					<input type="checkbox" name="info_jeux" id="info_jeux" onClick="jeux()" /> <label for="info_jeux">Jeux</label>
+					<input type="checkbox" name="info_jeux" id="info_jeux" onClick="clickJeux()" /> <label for="info_jeux">Jeux</label>
 				</div>
 
 				<div class="hide" id="boxinforight">
@@ -175,7 +209,7 @@
 			<input type="checkbox" name="nature" id="nature" /> <label for="nature">Nature</label><br />
 			<input type="checkbox" name="sorties" id="sorties" /> <label for="sorties">Sorties</label><br />
 			<input type="checkbox" name="interet_autres" id="interet_autres" /> <label for="interet_autres">Autres :</label>
-			<input type="text" name="autre" value="Autres" onFocus="if (value == 'Autres') (value='')" />
+			<input type="text" name="autre" value="Autres" onFocus="if (value == 'Autres') (value='')" onBlur="Vide(value)" />
 		</div>
 		
 		<div id="niveau">
@@ -198,8 +232,14 @@
 	<input type="reset" value="Effacez tout !" />
 </form>
 	
-<script type="text/javascript"> /*Début du script pour Profession */
+<script type="text/javascript"> /*Début du script */
+
 	document.forms[0].name.focus();/*Ici on donne le focus a name du input de départ qui attribut le champ nom*/
+	
+	function Vide(champ){ //Alerte pour les champs vide
+		if (champ == ""){
+			alert("Le champ est vide!");}
+	}
 	
 	var cadre = document.monFormulaire.metier[0];
 	var fonctionnaire = document.monFormulaire.metier[1];
@@ -294,24 +334,69 @@
 		}
 	};
 	
-	function jeux() {
-		alert("Nouvelle fenêtre pour jouer !");
-		if(document.getElementById("info_jeux").checked == true) {
-			alert("Nouvelle fenêtre pour jouer !");
+	// Affiche une nouvelle fenêtre si on clique sur Jeux
+	function clickJeux () {
+		if (document.getElementById("info_jeux").checked == true) {
+			window.open('jeux.html?click=true','','')
 		}
-	};
+	}
 	
-	//Vérifier l'âge
-	function verification() {
-		var day = document.getElementById("day");
-		var months = document.getElementById("months");
-		var year = document.getElementById("year");
+	//fonction test date de naissance
+	function CalculAge() {
+		var today = new Date();// Le date d'ouverture de la page (aujourd'hui)
+		var an = document.getElementById('year').value; // l'année de naissance
+		var age = today.getFullYear()- an; //  différence en année
+		var journais = document.getElementById('day').value; // jour de naissance
+		var moisnais = document.getElementById('months').value; // mois de naissance
+		var jourjour = today.getDate() // jour d'aujourd'hui
+		var moisjour = today.getMonth()+1 // mois d'aujourd'hui
+		var anneejour = today.getYear()+1900 // année d'aujourd'hui
+
+		// Calcule de l'age
+		if (moisnais > moisjour){	// Si mois de naissance est supérieur au mois d'aujourd'hui on enlève 1 ans 
+			age--;
+		} else if (moisnais == moisjour && journais > jourjour){ // Sinon si le mois est celui d'aujourd'hui et que le jour de naissance est supérieur au jour d'aujourd'hui on enlève 1 ans
+			age--;
+		}
+
+		// Vérification de la date de naissance
+		if (an > anneejour){
+			alert("Vous seriez donc né(e) dans le futur?")
+		} else if (an == anneejour && moisnais > moisjour) {
+			alert("Vous seriez donc né(e) dans le futur?")
+		} else if (an == anneejour && moisnais == moisjour && journais > jourjour){
+			alert("Vous seriez donc né(e) dans le futur?")
+		}
 		
-		if (year < 1994) {
-			alert("Tu es trop jeune");
+		// Affichage d'un message pour les mineurs 
+		else if(age<18){	//Si l'age est inférieur à 18 on affiche ...
+			alert("Vous êtes mineur(e)?");
 		}
 	}
 
+	//fonction test numéro de téléphone
+	function NumTel(){
+		var  tel = document.getElementById('tel').value; // téléphone
+		var telpro = document.getElementById('telpro').value; // téléphone pro
+		var telmobile = document.getElementById('telmobile').value; // téléphone mobile
+
+		if (tel == telpro && tel == telmobile && telpro == telmobile){ // Si les 3 numéros identiques alerte
+			alert("Les trois numéros sont identiques");
+		}
+	}
+
+	//fonction pré-renseignement ville
+	function CodeVille(){
+		var code = document.getElementById('code').value; // On définit une variable = au code postal
+		var departement = code.substr(0,2); // On définit une variable = au deux premiers chiffres du code postal
+
+		// Test du code postal
+		if (code == 21000){// Si le code est 21000 on écrit Dijon
+			document.getElementById('ville').value="Dijon";
+		} else if (departement == 75){
+			document.getElementById('ville').value="Paris";
+		} // Sinon si le code est 75??? on écrit Paris
+	}
 </script><!-- fin du script -->
 </body>
 </html>
