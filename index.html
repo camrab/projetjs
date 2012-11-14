@@ -6,7 +6,6 @@
 	
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css" /> -->
 	
 	<!-- JS -->
 	<script type="text/javascript" src="form.js"></script>
@@ -229,16 +228,17 @@
 	</div>
 	
 	<input type="submit" value="Envoyer !" />
-	<input type="reset" value="Effacez tout !" />
+	<input type="reset" id="reset" value="Effacer tout !" />
 </form>
 	
 <script type="text/javascript"> /*Début du script */
 
-	document.forms[0].name.focus();/*Ici on donne le focus a name du input de départ qui attribut le champ nom*/
+	document.forms[0].name.focus(); /*Ici on donne le focus a name du input de départ qui attribut le champ nom*/
 	
-	function Vide(champ){ //Alerte pour les champs vide
+	function Vide(champ){ //Alerte pour les champs vides
 		if (champ == ""){
-			alert("Le champ est vide!");}
+			alert("Le champ est vide !");
+		}
 	}
 	
 	var cadre = document.monFormulaire.metier[0];
@@ -250,7 +250,7 @@
 	var etudiant = document.monFormulaire.metier[6];
 	var autre = document.monFormulaire.metier[7];
 	var info = document.monFormulaire.info;
-	var level = document.monFormulaire.level;
+	var reset = document.monFormulaire.reset;
 
 	cadre.onclick = function() {
 		document.getElementById("entreprise_hide").style.display = "block" /*ici l'élément dans la div hidden sera affiché*/
@@ -320,6 +320,11 @@
 	info.onclick = function() {
 		if(document.getElementById("info_hide").style.display == "block") {
 			document.getElementById("info_hide").style.display = "none";
+			
+			var info_hide_inputs = document.getElementById("info_hide").getElementsByTagName("input");
+			for(i=0 ; i < info_hide_inputs.length ; i++) {
+				info_hide_inputs[i].checked = false;
+			}
 		} else {
 			document.getElementById("info_hide").style.display = "block";
 		}
@@ -396,6 +401,11 @@
 		} else if (departement == 75){
 			document.getElementById('ville').value="Paris";
 		} // Sinon si le code est 75??? on écrit Paris
+	}
+	
+	reset.onclick = function() {
+		document.getElementById('motiv').style.display = 'block';
+		document.getElementById('info_hide').style.display = 'none';
 	}
 </script><!-- fin du script -->
 </body>
