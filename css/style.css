@@ -1,6 +1,42 @@
 /* Un petit CSS pour une mise en forme claire 
-MAJ : 05/11/2012
+MAJ : 14/11/2012
 */
+
+@font-face { /*Pour la typo*/
+    font-family:"CaviarDreamsBold";
+    src:url(CaviarDreamsBold.ttf);
+}
+
+body{
+	height:100%;
+	font-family:"CaviarDreamsBold";
+	background-repeat:no-repeat;
+	background-image: linear-gradient(bottom, rgb(255) 18%, rgb(189) 56%, rgb(187,188,189) 72%);
+	background-image: -o-linear-gradient(bottom, rgb(255) 18%, rgb(189) 56%, rgb(187,188,189) 72%);
+	background-image: -moz-linear-gradient(bottom, rgb(255) 18%, rgb(189) 56%, rgb(187,188,189) 72%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255) 18%, rgb(189) 56%, rgb(187,188,189) 72%);
+	background-image: -ms-linear-gradient(bottom, rgb(255) 18%, rgb(189) 56%, rgb(187,188,189) 72%);
+
+	background-image: 
+	-webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.18, rgb(255)),
+		color-stop(0.56, rgb(189)),
+		color-stop(0.72, rgb(187))
+	);
+}
+
+/* ----------------
+Les caractéristiques du conteneur 
+------------------*/
+#content{
+	padding:15px 0 0 0; /*espacement de 15px vers le bas*/
+	color:#333;			/*Couleur choisis */
+	width:480px;		/*Dimension en largeur du conteneur*/
+	margin:auto;	/*équivalent de margin right left auto*/	
+}
 
 /* ----------------
 De manière générale
@@ -8,6 +44,8 @@ De manière générale
 form {padding-left: 10px;}/* Formulaire globale */
 
 h2 { /* Titres */
+	text-decoration:underline;
+	color:#09F;
 	font-size: 16px;
 	font-family: Arial, sans serif;
 	clear: both;

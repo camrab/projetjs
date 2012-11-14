@@ -1,24 +1,30 @@
 <!Doctype html>
 <html>
 <head>
+	<meta charset="utf-8" lang="fr" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<title>Notre superbe formulaire</title>
 	<link type="text/plain" rel="author" href="humans.txt" /> <!-- La Team -->
 	
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	
-	<!-- JS -->
-	<script type="text/javascript" src="form.js"></script>
 </head>
 
 <body>
-<form name="monFormulaire">
-	<div id="identity" class="bloc"><!-- IdentitÈ -->
+<div id="content"><!-- Bloc conteneur, qui englobe le formulaire -->
+
+<form name="monFormulaire"><!-- Ouverture du formulaire -->
+
+<h2>Identit√©</h2>
+	<div id="identity" class="bloc"><!-- Identit√© -->
 		<label for="name">Nom :</label>
 		<input type="text" name="name" value="Nom" id="name" onFocus="if (value == 'Nom') (value='')" onBlur="Vide(value)" />
 		
-		<label for="firstname">PrÈnom :</label>
-		<input type="text" name="firstname" value="PrÈnom" id="firstname" onFocus="if (value == 'PrÈnom') (value='')" onBlur="Vide(value)" />
+		<label for="firstname">Pr√©nom :</label>
+		<input type="text" name="firstname" value="Pr√©nom" id="firstname" onFocus="if (value == 'Pr√©nom') (value='')" onBlur="Vide(value)" />
 	</div>
 	
 	<div id="birth" class="bloc">
@@ -61,7 +67,7 @@
 		<select name="months" id="months"><!-- Mois -->
 			<option value="mois">Mois</option>
 			<option value="1">Janv.</option>
-			<option value="2">FÈv.</option>
+			<option value="2">F√©v.</option>
 			<option value="3">Mars</option>
 			<option value="4">Av.</option>
 			<option value="5">Mai</option>
@@ -71,12 +77,12 @@
 			<option value="9">Sept.</option>
 			<option value="10">Oct.</option>
 			<option value="11">Nov.</option>
-			<option value="12">DÈc.</option>
+			<option value="12">D√©c.</option>
 		</select>
 		
-		<select name="year" id="year"><!-- AnnÈe -->
-			<option value="annÈe">AnnÈe</option>
-			<option value="3000">3000</option><!-- Affiche une alerte si sÈlectionne 3000 "vous Ítes dans le futur" -->
+		<select name="year" id="year"><!-- Ann√©e -->
+			<option value="ann√©e">Ann√©e</option>
+			<option value="3000">3000</option><!-- Affiche une alerte si s√©lectionne 3000 "vous √™tes dans le futur" -->
 			<option value="2012">2012</option>
 			<option value="2011">2011</option>
 			<option value="2010">2010</option>
@@ -103,11 +109,11 @@
 			<option value="1989">1989</option>
 		</select>
 		
-		<input type="button" value="VÈrifier !" onClick="CalculAge();" /> <!-- Uniquement pour la date -->
+		<input type="button" value="V√©rifier !" onClick="CalculAge();" /> <!-- Uniquement pour la date -->
 	</div>
 
 	<div id="phone" class="bloc"><!-- Telephone -->
-		<h2>NumÈro de tÈlÈphone</h2>
+		<h2>Num√©ro de t√©l√©phone</h2>
 		<label for="tel">Domicile :</label>
 		<input type="tel" name="tel" value="0123456789" id="tel" onFocus="if (value == '0123456789') (value='')" onChange="NumTel()" onBlur="Vide(value)" /><br />
 		
@@ -122,7 +128,7 @@
 		<label for="adresse">Adresse :</label>
 		<input type="text" name="adresse" value="Adresse" id="adresse" onFocus="if (value == 'Adresse') (value='')" onBlur="Vide(value)" /><br />
 		
-		<label for="code">Code postal :</label> <!-- Code postal avec la fonction Codeville qui permet de prÈ-remplir la ville -->
+		<label for="code">Code postal :</label> <!-- Code postal avec la fonction Codeville qui permet de pr√©-remplir la ville -->
 		<input type="text" name="code" value="Ex : 75001" id="code" onFocus="if (value == 'Ex : 75001') (value='')" onBlur="CodeVille();Vide(value)" />
 		
 		<label for="ville">Ville :</label>
@@ -134,24 +140,24 @@
 	
 	<div id="job" class="bloc"><!-- Profession -->
 		<h2>Profession</h2>
-		
+				
 		<div id="job_left">
-			<input type="radio" name="metier" value="0" id="cadre" /><label for="cadre">Cadre </label><!-- boutton radio Cadre -->
+			<input type="radio" name="metier" value="0" id="cadre" /><label for="cadre"> Cadre </label><!-- boutton radio Cadre -->
 			<div id="entreprise_hide" class="hide"><!-- ELEMENT CACHE POUR CADRE -->
 				<label for="entreprise">Entreprise :</label> <input type="text" id="entreprise" onBlur="Vide(value)" />
 			</div><br />
 
 			<input type="radio" name="metier" value="1" id="fonctionnaire" /> <label for="fonctionnaire">Fonctionnaire</label>
 			<div id="fonct_hide" class="hide"><!-- ELEMENT CACHE POUR FONCTIONNAIRE -->
-				<label for="admin">EntitÈ Administrative :<input type="text" id="admin" onBlur="Vide(value)" /></label>
+				<label for="admin">Entit√© Administrative :<input type="text" id="admin" onBlur="Vide(value)" /></label>
 			</div><br />
 
-			<input type="radio" name="metier" value="2" id="prof_liberal" /> <label for="prof_liberal">Profession Liberale</label><br />
+			<input type="radio" name="metier" value="2" id="prof_liberal" /> <label for="prof_liberal">Profession Lib√©rale</label><br />
 			<input type="radio" name="metier" value="3" id="artisan" /> <label for="artisan">Artisan</label>
 		</div>
 		
 		<div id="job_right">
-			<input type="radio" name="metier" value="4" id="salarie" /><label for="salarie">SalariÈ</label><br />
+			<input type="radio" name="metier" value="4" id="salarie" /><label for="salarie">Salari√©</label><br />
 			<input type="radio" name="metier" value="5" id="patron" /><label for="patron">Patron</label>
 
 			<select name="patron" id="patron_hide" class="hide"> <!-- ELEMENT CACHE POUR PATRON -->
@@ -172,20 +178,20 @@
 			
 			<input type="radio" name="metier" value="6" id="etudiant" /><label for="etudiant">Etudiant</label>
 			<div id="ecole_hide" class="hide"><!-- ELEMENT CACHE POUR ETUDIANT -->
-				<label for="ecole">Ecole/UniversitÈ :</label> <input type="text" id="ecole" onBlur="Vide(value)" />
+				<label for="ecole">Ecole/Universit√© :</label> <input type="text" id="ecole" onBlur="Vide(value)" />
 			</div><br />
 
 			<input type="radio" name="metier" value="7" id="autre" /><label for="autre">Autre</label>
-			<label for="autre2">PrÈcisez :</label> <input type="text" id="autre2" value="Autre" onFocus="if (value == 'Autre') (value='')" onBlur="Vide(value)" />
+			<label for="autre2">Pr√©cisez :</label> <input type="text" id="autre2" value="Autre" onFocus="if (value == 'Autre') (value='')" onBlur="Vide(value)" />
 		</div>
 	</div>
 	
-	<div id="loisir" class="bloc"><!-- Centres d'intÈrÍt -->
-		<h2>Centres d'intÈrÍt</h2>
+	<div id="loisir" class="bloc"><!-- Centres d'int√©r√™t -->
+		<h2>Centres d'int√©r√™t</h2>
 		
 		<div id="interetleft">
 			<input type="checkbox" name="sport" id="sport" /> <label for="sport">Sport</label><br />
-			<input type="checkbox" name="cine" id="cine" /> <label for="cine">CinÈma</label><br />
+			<input type="checkbox" name="cine" id="cine" /> <label for="cine">Cin√©ma</label><br />
 			<input type="checkbox" name="jeux" id="jeux" /> <label for="jeux">Jeux</label><br />
 			<input type="checkbox" name="lecture" id="lecture" /> <label for="lecture">Lecture</label>
 		</div>
@@ -194,7 +200,7 @@
 			<input type="checkbox" name="info" id="info" value="8" /><label for="info">Informatique</label><br />
 			
 			<div id="info_hide"><!-- ELEMENT CACHE POUR INFO -->
-				<div class="hide" id="boxinfoleft"><!-- Champs invisibles, Alerte "Nouvelle fenÍtre pour jouer" -->
+				<div class="hide" id="boxinfoleft"><!-- Champs invisibles, Alerte "Nouvelle fen√™tre pour jouer" -->
 					<input type="checkbox" name="logiciel" id="logiciel" /> <label for="logiciel">Logiciels</label><br />
 					<input type="checkbox" name="info_jeux" id="info_jeux" onClick="clickJeux()" /> <label for="info_jeux">Jeux</label>
 				</div>
@@ -215,7 +221,7 @@
 			<label for="level">Niveau du jeu :</label>
 			<select name="level" id="level">
 				<option value="faible">Faible</option>
-				<option value="intermediaire">IntermÈdiaire</option>
+				<option value="intermediaire">Interm√©diaire</option>
 				<option value="fort">Fort</option>
 				<option value="expert" name="expert">Expert</option>
 			</select>
@@ -224,23 +230,41 @@
 	
 	<div id="motiv" class="bloc"><!-- Motivations, masquer s'il a choisi le level "expert"-->
 		<h2><label for="motivations">Motivations</label></h2>
-		<textarea name="motivations" id="motivations" rows="7" cols="30" placeholder="DÈcrivez en quelques lignes vos motivations..." onFocus="if (value == 'DÈcrivez en quelques lignes vos motivations...') (value='')" ></textarea>
+		<textarea name="motivations" id="motivations" rows="7" cols="30" placeholder="D√©crivez en quelques lignes vos motivations..." onFocus="if (value == 'D√©crivez en quelques lignes vos motivations...') (value='')" ></textarea>
 	</div>
 	
 	<input type="submit" value="Envoyer !" />
-	<input type="reset" id="reset" value="Effacer tout !" />
+	<input type="reset" id="reset" value="Effacez tout !" />
 </form>
-	
-<script type="text/javascript"> /*DÈbut du script */
+	</div>
+<script type="text/javascript"> /*D√©but du script */
 
-	document.forms[0].name.focus(); /*Ici on donne le focus a name du input de dÈpart qui attribut le champ nom*/
-	
+	/*------------------------------
+	--------------------------------
+	----Bienvenue dans notre JS !---
+	--------------------------------
+	-------------------------------*/
+
+
+	/*-------------------
+	De mani√®re globale...
+	--------------------*/
+
+	document.forms[0].name.focus(); /*Ici on donne le focus a name du input de d√©part qui attribut le champ nom*/
+
 	function Vide(champ){ //Alerte pour les champs vides
 		if (champ == ""){
 			alert("Le champ est vide !");
 		}
 	}
-	
+
+
+
+	/*-------------------
+	Cacher des √©l√©ments...
+	--------------------*/
+
+	/*Variables pour rendre visibles au click les √©l√©ments pour la partie profession*/
 	var cadre = document.monFormulaire.metier[0];
 	var fonctionnaire = document.monFormulaire.metier[1];
 	var prof_liberal = document.monFormulaire.metier[2];
@@ -249,163 +273,191 @@
 	var patron = document.monFormulaire.metier[5];
 	var etudiant = document.monFormulaire.metier[6];
 	var autre = document.monFormulaire.metier[7];
-	var info = document.monFormulaire.info;
-	var reset = document.monFormulaire.reset;
+
+
+
+	var info = document.monFormulaire.info; /*Cacher les elements de l'Informatique dans Centres d'int√©ret */
+	var reset = document.monFormulaire.reset; /*Variable reset pour tout remettre bien*/
 
 	cadre.onclick = function() {
-		document.getElementById("entreprise_hide").style.display = "block" /*ici l'ÈlÈment dans la div hidden sera affichÈ*/
-		document.getElementById("fonct_hide").style.display = "none"
-		document.getElementById("patron_hide").style.display = "none"
-		document.getElementById("ecole_hide").style.display = "none"
-		document.getElementById("autre_hide").style.display = "none"
+		document.getElementById("entreprise_hide").style.display = "block"; /*ici l'√©l√©ment dans la div hidden sera affich√©*/
+		document.getElementById("fonct_hide").style.display = "none";
+		document.getElementById("patron_hide").style.display = "none";
+		document.getElementById("ecole_hide").style.display = "none";
+		document.getElementById("autre_hide").style.display = "none";
 	};
-	
+		
 	fonctionnaire.onclick = function() {
-		document.getElementById("entreprise_hide").style.display = "none"
-		document.getElementById("fonct_hide").style.display = "block" /*ici l'ÈlÈment dans la div hidden2 sera affichÈ*/
-		document.getElementById("patron_hide").style.display = "none"
-		document.getElementById("ecole_hide").style.display = "none"
-		document.getElementById("autre_hide").style.display = "none"
+		document.getElementById("entreprise_hide").style.display = "none";
+		document.getElementById("fonct_hide").style.display = "block"; /*ici l'√©l√©ment dans la div hidden2 sera affich√©*/
+		document.getElementById("patron_hide").style.display = "none";
+		document.getElementById("ecole_hide").style.display = "none";
+		document.getElementById("autre_hide").style.display = "none";
 	};
-	
+		
 	prof_liberal.onclick = function() {
-		document.getElementById("entreprise_hide").style.display = "none"
-		document.getElementById("fonct_hide").style.display = "none"
-		document.getElementById("patron_hide").style.display = "none"
-		document.getElementById("ecole_hide").style.display = "none"
-		document.getElementById("autre_hide").style.display = "none"
+		document.getElementById("entreprise_hide").style.display = "none";
+		document.getElementById("fonct_hide").style.display = "none";
+		document.getElementById("patron_hide").style.display = "none";
+		document.getElementById("ecole_hide").style.display = "none";
+		document.getElementById("autre_hide").style.display = "none";
 	};
-	
+		
 	artisan.onclick = function() {
-		document.getElementById("entreprise_hide").style.display = "none"
-		document.getElementById("fonct_hide").style.display = "none"
-		document.getElementById("patron_hide").style.display = "none"
-		document.getElementById("ecole_hide").style.display = "none"
-		document.getElementById("autre_hide").style.display = "none"
+		document.getElementById("entreprise_hide").style.display = "none";
+		document.getElementById("fonct_hide").style.display = "none";
+		document.getElementById("patron_hide").style.display = "none";
+		document.getElementById("ecole_hide").style.display = "none";
+		document.getElementById("autre_hide").style.display = "none";
 	};
-	
+		
 	salarie.onclick = function() {
-		document.getElementById("entreprise_hide").style.display = "none"
-		document.getElementById("fonct_hide").style.display = "none"
-		document.getElementById("patron_hide").style.display = "none"
-		document.getElementById("ecole_hide").style.display = "none"
-		document.getElementById("autre_hide").style.display = "none"
+		document.getElementById("entreprise_hide").style.display = "none";
+		document.getElementById("fonct_hide").style.display = "none";
+		document.getElementById("patron_hide").style.display = "none";
+		document.getElementById("ecole_hide").style.display = "none";
+		document.getElementById("autre_hide").style.display = "none";
 	};
-	
+		
 	patron.onclick = function() {
-		document.getElementById("entreprise_hide").style.display = "none"
-		document.getElementById("fonct_hide").style.display = "none"
-		document.getElementById("patron_hide").style.display = "block" /*ici l'ÈlÈment dans la div patron_hide sera affichÈ*/
-		document.getElementById("ecole_hide").style.display = "none"
-		document.getElementById("autre_hide").style.display = "none"
+		document.getElementById("entreprise_hide").style.display = "none";
+		document.getElementById("fonct_hide").style.display = "none";
+		document.getElementById("patron_hide").style.display = "block"; /*ici l'√©l√©ment dans la div patron_hide sera affich√©*/
+		document.getElementById("ecole_hide").style.display = "none";
+		document.getElementById("autre_hide").style.display = "none";
 	};
-	
+		
 	etudiant.onclick = function() {
-		document.getElementById("entreprise_hide").style.display = "none"
-		document.getElementById("fonct_hide").style.display = "none"
-		document.getElementById("patron_hide").style.display = "none"
-		document.getElementById("ecole_hide").style.display = "block" /*ici l'ÈlÈment dans la div ecole_hide sera affichÈ*/
-		document.getElementById("autre_hide").style.display = "none"
+		document.getElementById("entreprise_hide").style.display = "none";
+		document.getElementById("fonct_hide").style.display = "none";
+		document.getElementById("patron_hide").style.display = "none";
+		document.getElementById("ecole_hide").style.display = "block"; /*ici l'√©l√©ment dans la div ecole_hide sera affich√©*/
+		document.getElementById("autre_hide").style.display = "none";
 	};
-	
+		
 	autre.onclick = function() {
-		document.getElementById("entreprise_hide").style.display = "none"
-		document.getElementById("fonct_hide").style.display = "none"
-		document.getElementById("patron_hide").style.display = "none"
-		document.getElementById("ecole_hide").style.display = "none"
-		document.getElementById("autre_hide").style.display = "block" /*ici l'ÈlÈment dans la div autre_hide sera affichÈ*/
+		document.getElementById("entreprise_hide").style.display = "none";
+		document.getElementById("fonct_hide").style.display = "none";
+		document.getElementById("patron_hide").style.display = "none";
+		document.getElementById("ecole_hide").style.display = "none";
+		document.getElementById("autre_hide").style.display = "block"; /*ici l'√©l√©ment dans la div autre_hide sera affich√©*/
 	};
-	
-	//Cacher le info
+		
+	//Cache le info
 	info.onclick = function() {
-		if(document.getElementById("info_hide").style.display == "block") {
-			document.getElementById("info_hide").style.display = "none";
-			
-			var info_hide_inputs = document.getElementById("info_hide").getElementsByTagName("input");
-			for(i=0 ; i < info_hide_inputs.length ; i++) {
+		if(document.getElementById("info_hide").style.display == "block") { /*1) si la div des sous-elements de l'Informatique sont visibles*/
+			document.getElementById("info_hide").style.display = "none"; //=> Alors il faut les cacher
+				
+			var info_hide_inputs = document.getElementById("info_hide").getElementsByTagName("input"); // Sinon, d√©cocher les checkbox
+			for(i=0 ; i < info_hide_inputs.length ; i++) { /*Boucle pour chercher toutes les checkbox des sous-elements de l'Informatique*/
 				info_hide_inputs[i].checked = false;
 			}
 		} else {
-			document.getElementById("info_hide").style.display = "block";
+			document.getElementById("info_hide").style.display = "block"; //2) Sinon, les rendre visibles
 		}
 	};
-	
-	// Cacher motiv si niveau expert
+		
+	// Cache motiv si niveau expert
 	level.onchange = function() {
-		if(level.options[level.selectedIndex].value == "expert") {
-			document.getElementById("motiv").style.display = "none";
+		if(level.options[level.selectedIndex].value == "expert") { /*1) Si la valeur s√©lectionn√©e dans le menu d√©roulant du niveau est expert*/
+			document.getElementById("motiv").style.display = "none"; //=> Alors cacher le textarea de motivation
 		} else {
-			document.getElementById("motiv").style.display = "block";
+			document.getElementById("motiv").style.display = "block"; //2) Sinon, rendre visible le textarea de motivation
 		}
 	};
-	
-	// Affiche une nouvelle fenÍtre si on clique sur Jeux
+
+
+
+	/*---------------------------------------------
+	Une nouvelle fen√™tre en cas de level Expert...
+	---------------------------------------------*/
+	// Affiche une nouvelle fen√™tre si on clique sur Jeux
 	function clickJeux () {
-		if (document.getElementById("info_jeux").checked == true) {
-			window.open('jeux.html?click=true','','')
+		if (document.getElementById("info_jeux").checked == true) { //Si l'input jeux est check√©
+			window.open('jeux.html?click=true','',''); // Alors ouvrir une nouvelle fen√™tre 
 		}
 	}
-	
+
+
+
+	/*---------------------------------------------
+	Une v√©rification pointilleuse pour la date de 
+	naissance...
+	---------------------------------------------*/
 	//fonction test date de naissance
 	function CalculAge() {
 		var today = new Date();// Le date d'ouverture de la page (aujourd'hui)
-		var an = document.getElementById('year').value; // l'annÈe de naissance
-		var age = today.getFullYear()- an; //  diffÈrence en annÈe
+		var an = document.getElementById('year').value; // l'ann√©e de naissance
+		var age = today.getFullYear()- an; //  diff√©rence en ann√©e
 		var journais = document.getElementById('day').value; // jour de naissance
 		var moisnais = document.getElementById('months').value; // mois de naissance
-		var jourjour = today.getDate() // jour d'aujourd'hui
-		var moisjour = today.getMonth()+1 // mois d'aujourd'hui
-		var anneejour = today.getYear()+1900 // annÈe d'aujourd'hui
+		var jourjour = today.getDate(); // jour d'aujourd'hui
+		var moisjour = today.getMonth()+1; // mois d'aujourd'hui
+		var anneejour = today.getYear()+1900; // ann√©e d'aujourd'hui
 
 		// Calcule de l'age
-		if (moisnais > moisjour){	// Si mois de naissance est supÈrieur au mois d'aujourd'hui on enlËve 1 ans 
+		if (moisnais > moisjour){	/* Si mois de naissance est sup√©rieur au mois d'aujourd'hui on enl√®ve 1 ans */
 			age--;
-		} else if (moisnais == moisjour && journais > jourjour){ // Sinon si le mois est celui d'aujourd'hui et que le jour de naissance est supÈrieur au jour d'aujourd'hui on enlËve 1 ans
+		} else if (moisnais == moisjour && journais > jourjour){ /*Sinon si le mois est celui d'aujourd'hui et que le jour de naissance est sup√©rieur au jour d'aujourd'hui on enl√®ve 1 ans*/
 			age--;
 		}
 
-		// VÈrification de la date de naissance
+		// V√©rification de la date de naissance
 		if (an > anneejour){
-			alert("Vous seriez donc nÈ(e) dans le futur?")
+			alert("Vous seriez donc n√©(e) dans le futur?");
 		} else if (an == anneejour && moisnais > moisjour) {
-			alert("Vous seriez donc nÈ(e) dans le futur?")
+			alert("Vous seriez donc n√©(e) dans le futur?");
 		} else if (an == anneejour && moisnais == moisjour && journais > jourjour){
-			alert("Vous seriez donc nÈ(e) dans le futur?")
-		}
-		
-		// Affichage d'un message pour les mineurs 
-		else if(age<18){	//Si l'age est infÈrieur ‡ 18 on affiche ...
-			alert("Vous Ítes mineur(e)?");
+			alert("Vous seriez donc n√©(e) dans le futur?");
+		} // Affichage d'un message pour les mineurs 
+		else if(age<18){	//Si l'age est inf√©rieur √† 18 on affiche ...
+			alert("Vous √™tes mineur(e)?");
 		}
 	}
 
-	//fonction test numÈro de tÈlÈphone
+
+
+	/*---------------------------
+	Test des num√©ros de t√©l√©phone...
+	----------------------------*/
+	//fonction test num√©ro de t√©l√©phone
 	function NumTel(){
-		var  tel = document.getElementById('tel').value; // tÈlÈphone
-		var telpro = document.getElementById('telpro').value; // tÈlÈphone pro
-		var telmobile = document.getElementById('telmobile').value; // tÈlÈphone mobile
-
-		if (tel == telpro && tel == telmobile && telpro == telmobile){ // Si les 3 numÈros identiques alerte
-			alert("Les trois numÈros sont identiques");
+		var  tel = document.getElementById('tel').value; // t√©l√©phone
+		var telpro = document.getElementById('telpro').value; // t√©l√©phone pro
+		var telmobile = document.getElementById('telmobile').value; // t√©l√©phone mobile
+		
+		if (tel == telpro && tel == telmobile && telpro == telmobile){ // Si les 3 num√©ros identiques alerte
+			alert("Les trois num√©ros sont identiques");
 		}
 	}
 
-	//fonction prÈ-renseignement ville
+
+
+	/*-----------------------------------------
+	Pr√©remplissage des √©l√©ments de l'Adresse...
+	------------------------------------------*/
+	//fonction pr√©-renseignement ville
 	function CodeVille(){
-		var code = document.getElementById('code').value; // On dÈfinit une variable = au code postal
-		var departement = code.substr(0,2); // On dÈfinit une variable = au deux premiers chiffres du code postal
+		var code = document.getElementById('code').value; // On d√©finit une variable = au code postal
+		var departement = code.substr(0,2); // On d√©finit une variable = au deux premiers chiffres du code postal
 
 		// Test du code postal
-		if (code == 21000){// Si le code est 21000 on Ècrit Dijon
+		if (code == 21000){// Si le code est 21000 on √©crit Dijon
 			document.getElementById('ville').value="Dijon";
 		} else if (departement == 75){
 			document.getElementById('ville').value="Paris";
-		} // Sinon si le code est 75??? on Ècrit Paris
+		} // Sinon si le code est 75??? on √©crit Paris
 	}
-	
+
+
+
+	/*------------------------------------
+	Remettre √† z√©ro si on s'est tromp√©...
+	--------------------------------------*/
+	/*Si click sur reset, remettre tout √† z√©ro*/
 	reset.onclick = function() {
-		document.getElementById('motiv').style.display = 'block';
-		document.getElementById('info_hide').style.display = 'none';
+		document.getElementById('motiv').style.display = 'block'; /*r√©affiche le motiv si mode expert s√©lectionn√© avant*/
+		document.getElementById('info_hide').style.display = 'none'; /*cache les sous-elements d'Informatique */
 	}
 </script><!-- fin du script -->
 </body>
