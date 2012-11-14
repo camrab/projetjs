@@ -18,6 +18,7 @@ Location: Paris, France.
 Notre intervenant : Monsieur Jacques Augustin
 
 /* SITE */
-Last update: 02/11/2012
+Last update: 14/11/2012
 Standards: HTML5, CSS3.
-Components: javascript
+Components: Javascript.
+Tools: GitHub, GoofleDocs, Groupe Facebook.
